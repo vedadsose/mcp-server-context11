@@ -1,5 +1,7 @@
 # Context11 MCP Server
 
+[![npm version](https://img.shields.io/npm/v/context11-mcp.svg)](https://www.npmjs.com/package/context11-mcp)
+
 An MCP (Model Context Protocol) server that provides access to your [Context11](https://context11.com) knowledge base for AI assistants.
 
 ## Installation
