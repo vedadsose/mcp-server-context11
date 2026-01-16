@@ -1,6 +1,6 @@
 # Context11 MCP Server
 
-An MCP (Model Context Protocol) server that provides access to your [Context11](https://app.context11.com) knowledge base for AI assistants.
+An MCP (Model Context Protocol) server that provides access to your [Context11](https://context11.com) knowledge base for AI assistants.
 
 ## Installation
 
@@ -15,7 +15,7 @@ npm install context11-mcp
 | Variable | Description | Required |
 |----------|-------------|----------|
 | `CONTEXT11_API_KEY` | Your Context11 API key (starts with `ctx11_`) | Yes |
-| `CONTEXT11_URL` | API base URL (default: `https://app.context11.com`) | No |
+| `CONTEXT11_URL` | API base URL (default: `https://context11.com`) | No |
 
 ### Claude Desktop
 
