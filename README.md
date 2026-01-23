@@ -112,6 +112,82 @@ Get the full content of a specific document by ID.
 }
 ```
 
+### list_folders
+
+List all folders in the workspace.
+
+**Parameters:** None
+
+**Example Response:**
+
+```
+Found 2 folder(s):
+
+- **Engineering** (ID: abc123)
+  Documents: 5, Subfolders: 2
+
+- **Marketing** (ID: def456)
+  Documents: 3, Subfolders: 0
+```
+
+### list_documents
+
+List all documents in a specific folder.
+
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `folderId` | string | The folder ID to list documents from |
+
+**Example:**
+
+```json
+{
+  "folderId": "abc123"
+}
+```
+
+### read_document
+
+Read a document's full content by ID.
+
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `documentId` | string | The document ID to read |
+
+**Example:**
+
+```json
+{
+  "documentId": "abc123"
+}
+```
+
+### update_document
+
+Update a document's title and/or content. Content must be in Tiptap JSON format.
+
+**Parameters:**
+
+| Name | Type | Description |
+|------|------|-------------|
+| `documentId` | string | The document ID to update |
+| `title` | string | (Optional) New title for the document |
+| `content` | string | (Optional) New content in Tiptap JSON format |
+
+**Example:**
+
+```json
+{
+  "documentId": "abc123",
+  "title": "Updated Title",
+  "content": "{\"type\":\"doc\",\"content\":[{\"type\":\"paragraph\",\"content\":[{\"type\":\"text\",\"text\":\"Hello world\"}]}]}"
+}
+```
+
 ## Development
 
 ```bash
