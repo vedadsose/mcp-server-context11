@@ -1,15 +1,17 @@
 {
   "name": "context11-mcp",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "MCP server for Context11 - Search company knowledge base and retrieve documents",
-  "main": "dist/index.js",
+  "main": "dist/stdio.js",
   "type": "module",
   "bin": {
-    "context11-mcp": "./dist/index.js"
+    "context11-mcp": "./dist/stdio.js"
   },
   "scripts": {
-    "build": "tsc",
-    "start": "node dist/index.js",
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc",
+    "start": "node dist/stdio.js",
+    "start:http": "node dist/http.js",
     "dev": "tsc --watch",
     "prepublishOnly": "npm run build"
   },
@@ -38,9 +40,11 @@
   ],
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.25.2",
+    "express": "^4.21.0",
     "zod": "^3.24.0"
   },
   "devDependencies": {
+    "@types/express": "^5.0.0",
     "@types/node": "^22.10.0",
     "typescript": "^5.7.0"
   }
