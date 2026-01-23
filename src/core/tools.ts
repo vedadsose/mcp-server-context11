@@ -128,7 +128,7 @@ export function registerTools(
     {},
     async () => {
       try {
-        const folders = await apiRequest<Folder[]>(
+        const { folders } = await apiRequest<{ folders: Folder[] }>(
           "/api/mcp/folders",
           getApiKey(),
           getApiUrl()
