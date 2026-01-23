@@ -16,7 +16,7 @@ app.get("/health", (_req, res) => {
 });
 
 // MCP endpoint
-app.post("/mcp", async (req, res) => {
+app.post("/", async (req, res) => {
   const apiKey = req.headers["x-api-key"] as string | undefined;
 
   if (!apiKey) {
@@ -52,5 +52,5 @@ app.post("/mcp", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`Context11 MCP HTTP server running on port ${PORT}`);
   console.log(`Health check: http://localhost:${PORT}/health`);
-  console.log(`MCP endpoint: http://localhost:${PORT}/mcp`);
+  console.log(`MCP endpoint: http://localhost:${PORT}/`);
 });
