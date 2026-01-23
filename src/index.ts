@@ -106,7 +106,7 @@ async function apiRequest<T>(
 // Create MCP Server
 const server = new McpServer({
   name: "context11",
-  version: "1.1.0",
+  version: "1.1.1",
 });
 
 // Tool: Search knowledge base
@@ -360,11 +360,16 @@ server.tool(
 // Tool: Update document
 server.tool(
   "update_document",
-  "Update a document's title and/or content",
+  "Update a document's title and/or content. Content must be in Tiptap JSON format.",
   {
     documentId: z.string().describe("The document ID to update"),
     title: z.string().optional().describe("New title for the document"),
-    content: z.string().optional().describe("New content for the document"),
+    content: z
+      .string()
+      .optional()
+      .describe(
+        'New content in Tiptap JSON format. Example: {"type":"doc","content":[{"type":"paragraph","content":[{"type":"text","text":"Your text here"}]}]}'
+      ),
   },
   async ({ documentId, title, content }) => {
     try {
