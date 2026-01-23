@@ -12,7 +12,7 @@ app.use(express.json());
 
 // Health check endpoint
 app.get("/health", (_req, res) => {
-  res.json({ status: "ok", version: "1.2.0" });
+  res.json({ status: "ok", version: "1.2.1" });
 });
 
 // MCP endpoint
@@ -30,7 +30,7 @@ app.post("/", async (req, res) => {
 
   const server = new McpServer({
     name: "context11",
-    version: "1.2.0",
+    version: "1.2.1",
   });
 
   registerTools(

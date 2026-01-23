@@ -1,6 +1,6 @@
 {
   "name": "context11-mcp",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "MCP server for Context11 - Search company knowledge base and retrieve documents",
   "main": "dist/stdio.js",
   "type": "module",

@@ -13,7 +13,7 @@ if (!API_KEY) {
 
 const server = new McpServer({
   name: "context11",
-  version: "1.2.0",
+  version: "1.2.1",
 });
 
 registerTools(
